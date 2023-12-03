@@ -12,7 +12,7 @@ const FAQs = () => {
 
   return (
     <section id="faqs">
-      <h2>CIRTIFICATES</h2>
+      <h2>CERTIFICATES</h2>
       <p>
       What I have Achieved
       </p>
