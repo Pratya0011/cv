@@ -1,21 +1,26 @@
 const data = [
   {
     id: 1,
+    question: "Fellowship in Software Development - Frontend",
+    answer: "Fellowship in Software Development - Frontend BY Crio.do",
+  },
+  {
+    id: 2,
     question: "Full Stack Development Bootcamp",
     answer: "Full Stack Development Bootcamp BY knowledgeHut UpGrad",
   },
   {
-    id: 2,
+    id: 3,
     question: "Web Development Skills Hackathon",
     answer: "Hackathon Web Development contest",
   },
   {
-    id: 3,
+    id: 4,
     question: "Material UI - The Complete Guide With React (2024) Edition",
     answer: "Material UI - The Complete Guide With React (2024) Edition",
   },
   {
-    id: 4,
+    id: 5,
     question: "Mastering React Js with 10 Hands-on Projects",
     answer: "Hands on projects on React Js",
   },
