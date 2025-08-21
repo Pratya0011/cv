@@ -12,7 +12,7 @@ const data = [
   {
     id: 3,
     question: "Web Development Skills Hackathon",
-    answer: "Hackathon Web Development contest",
+    answer: "Hackathon Web Development contes",
   },
   {
     id: 4,
