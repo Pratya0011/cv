@@ -8,15 +8,14 @@ const data = [
     id: 1,
     icon: <AiFillAppstore />,
     title: "Jr Frontend Engineer | IIHT Techademy | Sept-23-present",
-    desc: `Partnered with the development team to create user-friendly interfaces using React.
-
-        Translated mockups and wireframes into functional, responsive web applications in close collaboration with designers.
-        
-        Collaborated with cross-functional teams, including backend developers, designers, and product managers, to deliver high-quality features and products.
-        
-        Integrated APIs to meet various component requirements.
-        
-        Proficient in technologies and tools including Redux, Redux Saga, and Material UI.`,
+    desc: `<p>Techademy Learning Solutions is a digital learning platform focused on enterprise upskilling, reskilling, and talent development.</p>
+  <ul>
+    <li>Developed and maintained assessment platforms supporting 12 question types, including coding assessments, cloud-based assessments, and interactive problem-solving tasks, with features like in-browser IDEs, non-editable code sections, test case execution, and dynamic language support.</li>
+    <li>Built the Techademy CodeBridge VS Code extension, integrating secure login (email & OTP), Git repo cloning, timer synchronization via WebSocket, code execution, and submission workflows.</li>
+    <li>Implemented real-time proctoring and analytical dashboards, enabling candidate monitoring, hackathon leaderboards, and assessment insights for admins.</li>
+    <li>Designed and implemented program and user management features for Techademy Campus, including Keycloak-based authentication, role-based onboarding, assessment repositories, and interactive dashboards.</li>
+    <li>Collaborated with designers and backend engineers to deliver responsive, interactive web applications using React, Redux, Redux-Saga, and Material-UI.</li>
+  </ul>`,
   },
   {
     id: 2,
