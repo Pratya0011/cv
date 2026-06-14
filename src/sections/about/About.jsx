@@ -11,11 +11,11 @@ const About = () => {
       <div className="container about__container">
         <div className="about__left">
           <div className="about__portrait">
-            <img src={AboutImage} alt="About Image" />
+            <img src={AboutImage} alt="Pratya Kumar Tagore" />
           </div>
         </div>
         <div className="about__right">
-          <h2>About Me</h2>
+          <h2 className="gradient-text">About Me</h2>
           <div className="about__cards">
             {value.map((item) => (
               <Card key={item.id} className="about__card">

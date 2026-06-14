@@ -5,18 +5,23 @@ import "./services.css";
 const Services = () => {
   return (
     <section id="services">
-      <h2>Experience and Education</h2>
-      <p>My Journey</p>
-      <div className="container services__container" data-aos="fade-up">
-        {data.map((item) => (
-          <Card key={item.id} className="service light">
-            <div className="service__icon">{item.icon}</div>
-            <div className="service__details">
-              <h4>{item.title}</h4>
-              <p dangerouslySetInnerHTML={{ __html: item.desc }} />
+      <h2>Experience &amp; Education</h2>
+      <p>My Professional Journey</p>
+      <div className="container" data-aos="fade-up">
+        <div className="timeline">
+          {data.map((item) => (
+            <div key={item.id} className="timeline__item">
+              <div className="timeline__marker">{item.icon}</div>
+              <Card className="timeline__card">
+                <h4>{item.title}</h4>
+                <div
+                  className="service__desc"
+                  dangerouslySetInnerHTML={{ __html: item.desc }}
+                />
+              </Card>
             </div>
-          </Card>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

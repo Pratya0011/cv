@@ -1,44 +1,50 @@
-import Card from "../../components/Card";
-
 const Project = ({ project }) => {
+  const bullets = project.desc
+    .split("\n")
+    .map((s) => s.replace(/^[•\-]\s*/, "").trim())
+    .filter(Boolean);
+
   return (
-    <Card className="portfolio__project">
+    <div className="portfolio__project">
       <div className="portfolio__project-image">
-        <img src={project.image} alt="Portfolio Project Image" />
+        <img src={project.image} alt={project.title} />
+        {project?.category !== "Techademy" && (
+          <div className="portfolio__project-overlay">
+            <div className="portfolio__project-links">
+              <a
+                href={project.demo}
+                className="btn sm primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Live Demo
+              </a>
+              <a
+                href={project.github}
+                className="btn sm outline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        )}
       </div>
-      <h4>{project.title}</h4>
-      {project?.category === "Techademy" ? (
-        <ul>
-          {project.desc.split("\n").map((item, index) => (
-            <li style={{ padding: 2 }} key={index}>
-              {item.replace("-", "").trim()}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>{project.desc}</p>
-      )}
-      {project?.category !== "Techademy" && (
-        <div className="portfolio__project-cta">
-          <a
-            href={project.demo}
-            className="btn sm"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Demo
-          </a>
-          <a
-            href={project.github}
-            className="btn sm primary"
-            target="_blank"
-            rel="noopner noreferrer"
-          >
-            Gitbub
-          </a>
-        </div>
-      )}
-    </Card>
+      <div className="portfolio__project-info">
+        <span className="portfolio__project-category">{project.category}</span>
+        <h4>{project.title}</h4>
+        {project?.category === "Techademy" ? (
+          <ul className="portfolio__project-bullets">
+            {bullets.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>{project.desc}</p>
+        )}
+      </div>
+    </div>
   );
 };
 

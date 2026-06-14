@@ -1,57 +1,74 @@
-.faqs__container {
+.certs__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem 4rem;
-    align-items: start;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    max-width: 860px;
+    margin-inline: auto;
+    animation: fadeUp 500ms ease-out forwards;
 }
 
-.card.faq:hover {
-    cursor: pointer;
-    background: var(--color-white);
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
-.faq > div {
+.cert__card {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 1.1rem;
+    padding: 1.4rem 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: var(--transition);
 }
 
-.faq h5 {
+.cert__card:hover {
+    border-color: var(--color-primary);
+    background: var(--color-primary-light);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px var(--color-primary-glow);
+}
+
+.cert__icon {
+    flex-shrink: 0;
+    width: 2.6rem;
+    height: 2.6rem;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 0.1rem;
+}
+
+.cert__info h5 {
+    color: var(--text-1);
+    font-weight: 700;
+    font-size: 0.88rem;
     line-height: 1.4;
+    margin-bottom: 0.3rem;
 }
 
-.faq__icon {
-    font-size: 1.2rem;
-    color: var(--color-black);
-    background: transparent;
+.cert__info small {
+    color: var(--text-2);
+    font-size: 0.76rem;
 }
 
-.faq__answer {
-    margin-top: 1rem;
-    opacity: 0;
-    animation: animateAnswer 500ms ease-in forwards;
-}
-
-@keyframes animateAnswer {
-    to {
-        opacity: 1;
-    }
-}
-
-
-/* MEDIA QUERIES (tablets) */
+/* TABLETS */
 @media screen and (max-width: 1024px) {
-    .faqs__container {
+    .certs__container {
         grid-template-columns: 1fr;
     }
 }
 
-
-/* MEDIA QUERIES (phones) */
+/* PHONES */
 @media screen and (max-width: 600px) {
-.faqs__container {
-    gap: 1rem;
-}
-
+    .certs__container {
+        gap: 0.85rem;
+    }
 }

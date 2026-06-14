@@ -1,24 +1,17 @@
-import Card from "../../components/Card"
-import {AiOutlinePlus, AiOutlineMinus} from 'react-icons/ai'
-import { useState } from "react"
+import { FaAward } from "react-icons/fa";
 
-
-const FAQ = ({faq}) => {
-    const [showAnswer, setShowAnswer] = useState(false);
-
-
-
+const FAQ = ({ faq }) => {
   return (
-    <Card className="faq" onClick={() => setShowAnswer(prev => !prev)}>
-        <div>
-            <h5 className="faq__question">{faq.question}</h5>
-            <button className="faq__icon">
-                {showAnswer ? <AiOutlineMinus/> : <AiOutlinePlus/>}
-            </button>
-        </div>
-        {showAnswer && <p className="faq__answer">{faq.answer}</p>}
-    </Card>
-  )
-}
+    <div className="cert__card">
+      <div className="cert__icon">
+        <FaAward />
+      </div>
+      <div className="cert__info">
+        <h5>{faq.question}</h5>
+        <small>{faq.answer}</small>
+      </div>
+    </div>
+  );
+};
 
-export default FAQ
+export default FAQ;

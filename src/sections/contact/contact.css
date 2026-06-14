@@ -1,34 +1,71 @@
 .contact__container {
-    width: fit-content;
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    animation: fadeUp 500ms ease-out forwards;
 }
 
-.contact__container a {
-    width: 5rem;
-    aspect-ratio: 1/1;
-    color: white;
-    background: var(--color-primary);
-    display: grid;
-    place-items: center;
-    font-size: 2rem;
-    border: 2px solid transparent;
-    border-radius: var(--border-radius-1);
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
-.contact__container a:hover {
-    background: transparent;
+.contact__link {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.5rem 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    min-width: 17rem;
+    transition: var(--transition);
+    color: inherit;
+}
+
+.contact__link:hover {
     border-color: var(--color-primary);
-    color: var(--color-primary);
-    transform: translateY(-0.5rem);
+    background: var(--color-primary-light);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 35px var(--color-primary-glow);
 }
 
+.contact__icon {
+    flex-shrink: 0;
+    width: 3.4rem;
+    height: 3.4rem;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.4rem;
+}
 
+.contact__info h5 {
+    color: var(--text-1);
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
 
-/* MEDIA QUERIES (phones) */
+.contact__info small {
+    color: var(--text-2);
+    font-size: 0.82rem;
+}
+
+/* PHONES */
 @media screen and (max-width: 600px) {
     .contact__container {
-        gap: 1.5rem;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact__link {
+        min-width: unset;
     }
 }

@@ -1,30 +1,27 @@
 .card {
-    background: var(--color-white);
+    background: var(--bg-card);
     padding: 1.5rem;
-    border: 2px solid transparent;
-    border-radius: var(--border-radius-1);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     transition: var(--transition);
 }
 
 .card:hover {
-    background: transparent;
-    border-color: var(--color-white);
-    transform: translateY(-0.5rem);
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 30px var(--color-primary-glow);
+    transform: translateY(-4px);
 }
 
 .card.light {
-    background: var(--color-light);
+    background: var(--bg-card);
 }
 
 .card.light:hover {
-    background: transparent;
-    border-color: var(--color-light);
+    border-color: var(--color-primary);
 }
 
-
-/* MEDIA QUERIES (phones) */
 @media screen and (max-width: 600px) {
-    .card {
-        padding: 1.2rem;
-    }
+    .card { padding: 1.2rem; }
 }
